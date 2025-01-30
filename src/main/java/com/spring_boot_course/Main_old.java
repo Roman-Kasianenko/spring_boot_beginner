@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@SpringBootApplication
+//@SpringBootApplication
 //@ComponentScan(basePackages = "com.spring_boot_course")
 //@EnableAutoConfiguration
 @RestController

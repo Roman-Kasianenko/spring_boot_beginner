@@ -1,12 +1,27 @@
 package com.spring_boot_course;
 
+import jakarta.persistence.*;
+
 import java.util.Objects;
 
+@Entity
 public class Customer {
-    String name;
-    Integer age;
-    String email;
-    Integer id;
+
+    @Id
+    @SequenceGenerator(
+            name = "customer_id_sequence",
+            sequenceName = "customer_id_sequence",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "customer_id_sequence"
+    )
+    private Integer id;
+
+    private String name;
+    private Integer age;
+    private String email;
 
     public Customer(String name,
                     Integer age,
